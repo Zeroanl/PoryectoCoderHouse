@@ -1,0 +1,59 @@
+
+{% extends "gestionFamiliares/base.html" %}
+{% load static %}
+
+{% block content %}
+<head>
+      <title> Gestion de Familiares </title>
+</head>
+<body> 
+
+    <table class="zui-table">
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Fecha Nacimiento
+                </th>
+                <th>
+                    Edad
+                </th>
+                <th>
+                    Parentesco
+                </th>
+                <th>
+                    Profesion
+                </th>
+            </tr>
+        </thead>
+        {% for f in data %}
+             <tr>
+                   <td>
+                       {{ f.nombre}}
+                   </td>
+                   <td>
+                       {{ f.apellido}}
+                   </td>
+                   <td>
+                       {{ f.fechaNac}}
+                   </td>
+                   <td>
+                       {{ f.edad}}
+                   </td>
+                   <td>
+                       {{ f.parentesco}}
+                   </td>
+                   <td>
+                       {{ f.profesion}}
+                   </td>
+             </tr>
+        {% endfor %}
+    </table>
+</body>
+
+{% endblock %}
